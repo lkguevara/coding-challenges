@@ -44,7 +44,7 @@ const deletePattern = (text="", pattern="") => {
 
 console.log(deletePattern("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz")); // imprime 1, 2, 3, 4 y 5
 
-// 7) Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.
+// 7. Programa una función que reciba un número y evalúe si es capicúa o no (que se lee igual en un sentido que en otro), pe. miFuncion(2002) devolverá true.
 
     // como cadena de texto
     const capicua = (number) => { 
@@ -54,3 +54,38 @@ console.log(deletePattern("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz")); // imprime 1
     }
 
     console.log(capicua(2002)) // true
+
+
+// 8. Programa una función que dado un array numérico devuelve otro array con los números elevados al cuadrado, pe. mi_funcion([1, 4, 5]) devolverá [1, 16, 25].
+    const devolverCuadrados = (arreglo=undefined) => { 
+       
+        // validaciones
+        if(arreglo === undefined) return console.log("no ingresaste un arreglo de números");
+        if(!(arreglo instanceof Array)) return console.log(`El valor ingresado no es un arreglo`);
+        if(arreglo.length === 0) return console.log(`El arreglo se encuentra vacío`);
+        
+        for (let num of arreglo) {
+            if(typeof num !== "number") return console.log (`El valor ${num} no es un número`)
+        }
+
+        // map: permite generar un nuevo arreglo a partir de uno original, pudiendose hacer diversas modificaciones
+        const nuevoArreglo = arreglo.map(el => el*el);
+        return console.log(`Arreglo original: ${arreglo}, \nArreglo elevado al cuadrado: ${nuevoArreglo}`)
+    }
+
+    devolverCuadrados() //no ingresaste un arreglo de números
+    devolverCuadrados(true) //El valor ingresado no es un arreglo
+    devolverCuadrados({}) //El valor ingresado no es un arreglo
+    devolverCuadrados([]) // El arreglo se encuentra vacío
+    devolverCuadrados([1,4,5]) //Arreglo original: 1,4,5, Arreglo elevado al cuadrado: 1,16,25
+
+
+
+// 9. Programa una función que dado un array devuelva el número mas alto y el más bajo de dicho array, pe. miFuncion([1, 4, 5, 99, -60]) devolverá [99, -60].
+
+
+
+// 10. Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.
+// 24) Programa una función que dado un arreglo de números devuelva un objeto con dos arreglos, el primero tendrá los numeros ordenados en forma ascendente y el segundo de forma descendiente, pe. miFuncion([7, 5,7,8,6]) devolverá { asc: [5,6,7,7,8], desc: [8,7,7,6,5] }.
+// 25) Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].
+// 26) Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
