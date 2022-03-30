@@ -90,6 +90,13 @@ console.log(deletePattern("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz")); // imprime 1
 
 // 10. Programa una función que dado un array de números devuelva un objeto con 2 arreglos en el primero almacena los números pares y en el segundo los impares, pe. miFuncion([1,2,3,4,5,6,7,8,9,0]) devolverá {pares: [2,4,6,8,0], impares: [1,3,5,7,9]}.
 
+    const arrParImpares = (arreglo) => {
+        let par = arreglo.filter(e => e%2 === 0);
+        let impar = arreglo.filter(e => e % 2 !== 0);
+        return console.log(`Los número pares son: ${par} y los impares son ${impar}`)
+    }
+
+    arrParImpares([1,2,3,4,5,6,7,8,9,0])
     
 
 
