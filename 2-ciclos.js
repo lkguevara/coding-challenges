@@ -155,3 +155,27 @@ for (let i=1; i<=num1; i++) {
 
     }
 
+// 11) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
+
+    const contarVocalesConsonates = (cadena) => {
+        let cantVocales =0, cantConsonant = 0;
+
+        for (let i = 0; i < cadena.length; i++) {
+            let c = cadena[i]; //imprime cada palabra de la cadena
+            
+            if (c == "a" || c == "e" || c == "i" || c == "o" || c == "u") {
+            cantVocales++;
+            }
+            else {
+                cantConsonant++;
+            }
+              
+        }
+        console.log(`Cantidad de vocales en la cadena es: ${cantVocales}` );
+        console.log(`Cantidad de consonantes en la cadena es: ${cantConsonant}` );
+    }
+
+    let cadena = "holaagdd";
+    console.log(`cadena ingresada: ${cadena}`  );
+    contarVocalesConsonates(cadena);
+
