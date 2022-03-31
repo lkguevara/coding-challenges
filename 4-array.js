@@ -104,11 +104,32 @@ console.log(deletePattern("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz")); // imprime 1
     const arrAscenDescent = (arreglo) => {
         return console.log(`Arreglo ordenado ascendente: ${arreglo.sort(function(a, b){return a - b})} y  descendiente: ${arreglo.sort(function(a, b){return b - a})}`)
     }
-    arrAscenDescent([7,5,7,8,6])
+    arrAscenDescent([7,5,7,8,6]) 
 
 
 // 12. Programa una función que dado un arreglo de elementos, elimine los duplicados, pe. miFuncion(["x", 10, "x", 2, "10", 10, true, true]) devolverá ["x", 10, 2, "10", true].
+    
+    const eliminarDuplicados = (arreglo=undefined) =>{ 
+         // validaciones
+         if(arreglo === undefined) return console.log("no ingresaste un arreglo de números");
+         if(!(arreglo instanceof Array)) return console.log(`El valor ingresado no es un arreglo`);
+         if(arreglo.length === 0) return console.log(`El arreglo se encuentra vacío`);
+         if(arreglo.length === 1) return console.log(`El arreglo debe tener al menos dos elementos`);
 
+        //  return console.log({
+        //      original: arreglo,
+        //      sinDuplicados: arreglo.filter((valor,posicion,self)=> self.indexOf(valor) === posicion)
+        //  })
 
+        //  Aplicando con set (permite crear objetos sin elementos duplicados)
+        return console.log({
+            original: arreglo,
+            sinDuplicados: [...new Set(arreglo)]
+        })
+         
+    }
+
+    eliminarDuplicados(["x", 10, "x", 2, "10", 10, true, true]) 
 
 // 13. Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
+
