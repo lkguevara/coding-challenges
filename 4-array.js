@@ -133,3 +133,18 @@ console.log(deletePattern("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz")); // imprime 1
 
 // 13. Programa una función que dado un arreglo de números obtenga el promedio, pe. promedio([9,8,7,6,5,4,3,2,1,0]) devolverá 4.5.
 
+    const promedioArreglo = (arreglo=undefined) =>{ 
+        // validaciones
+        if(arreglo === undefined) return console.log("no ingresaste un arreglo de números");
+        if(!(arreglo instanceof Array)) return console.log(`El valor ingresado no es un arreglo`);
+        if(arreglo.length === 0) return console.log(`El arreglo se encuentra vacío`);
+
+        // 
+        let contador = 0;
+        let promedio = arreglo.reduce((acumulador, valorActual) => acumulador + valorActual / arreglo.length, contador ) 
+
+    return console.log(promedio)
+        
+    }
+
+    promedioArreglo([9,8,7,6,5,4,3,2,1,0]) 
