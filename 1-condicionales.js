@@ -121,9 +121,37 @@
 
 
 
-// 9) Programa una función que obtenga un numero aleatorio entre 501 y 600.
+// 9. Programa una función que obtenga un numero aleatorio entre 501 y 600.
 
-const random = (max,min) => { return Math.ceil(Math.random()*(max-min)+min); }
-console.log(random(600,501));
+    const random = (max,min) => { return Math.ceil(Math.random()*(max-min)+min); }
+    console.log(random(600,501));
+
+// 10.	Leer un número entero y determinar si es un número terminado en 4.  
+
+    const numero = (numero) => {
+        if (numero % 10 === 4) {
+            return console.log(`El número ingresado ${numero}  termina en 4`); 
+        }else{
+            console.log(`El número ingresado ${numero} no termina en 4`)
+        }
+        
+    }
+
+    numero(255);
+
+// 11.	Leer un número entero y determinar si tiene 3 dígitos.
+
+    const cantDigitos = (numero) => {
+        
+        if (numero.toString().length === 3) {
+            return console.log(`El número ingresado ${numero} tiene 3 digitos`); 
+        }else{
+            console.log(`El número ingresado ${numero} tiene ${numero.toString().length} digitos`)
+        }
+        
+    }
+
+    cantDigitos(25425);
+
 
 
