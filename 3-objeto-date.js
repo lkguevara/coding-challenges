@@ -19,3 +19,17 @@
 
     }  
     console.log(anios(new Date(1984,4,23)));  
+
+// 2. Comprobar si un año es bisiesto
+
+    const leapYear = (year) => {
+        const leap = new Date(year, 1, 29).getDate() === 29;
+
+        if (leap) {
+            return console.log(`El año ingresado ${year} es bisiesto`);
+        }else{
+            console.log(`El año ingresado ${year} no es bisiesto`)
+        }
+    }
+
+    leapYear(2024)
