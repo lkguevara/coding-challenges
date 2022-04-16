@@ -147,7 +147,24 @@ console.log(deletePattern("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz")); // imprime 1
         
     }
 
-    promedioArreglo([9,8,7,6,5,4,3,2,1,0]) 
+    promedioArreglo([9,8,7,6,5,4,3,2,1,0]);
 
+// 14. Calcular propina de una factura dada, si la venta está entre 50 y 300 se tiene una propina del 15% pero si el valor es diferente la propina será del 20%. Luego, se creará un arreglo con las propinas brindadas. Por último, se creará un arreglo en el cual sume la factura dada más la propina.
+
+    // Calculando la propina
+    const calcTip = (bill) => {
+        return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
+    }
+
+    // Creando el arreglo de las facturas y propinas
+    const bills = [125, 555, 44];
+    const tips = [calcTip(bills[0]),calcTip(bills[1]),calcTip(bills[2])];
+    
+    console.log(bills, tips); //imprime: [ 125, 555, 44 ] [ 18.75, 111, 8.8 ]
+
+    // Arreglo total (factura + propina);
+
+    const totals = [bills[0]+ tips[0], bills[1]+ tips[1], tips[2] + bills[2] ]
+    console.log(bills, tips, totals); // imprime: [ 125, 555, 44 ] [ 18.75, 111, 8.8 ] [ 143.75, 666, 52.8 ]
 
    
