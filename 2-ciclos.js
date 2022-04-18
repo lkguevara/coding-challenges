@@ -23,7 +23,7 @@
     console.log(`La cantidad de números pares fue: ${numerosPares}`);
     console.log(`La cantidad de números cinco fue: ${numeros5}`);
 
-// 2. Utilizando un bucle, mostrar la suma y la media de los numeros introducidos hasta introducir un numero negativo y ahí mostrar el resultado.
+/*// 2. Utilizando un bucle, mostrar la suma y la media de los numeros introducidos hasta introducir un numero negativo y ahí mostrar el resultado.
 
     let suma= 0, contador1= 0
 
@@ -63,7 +63,7 @@
         }
         
     }
-
+*/
 // 5. Programa una función que cuente el número de caracteres de una cadena de texto.
     
     // function count(cadena="") {
@@ -137,7 +137,7 @@
     }  
     console.log(primo(7)); 
 
-//  9. Muestre todos los números divisores de un número introducido en prompt
+/*//  9. Muestre todos los números divisores de un número introducido en prompt
 let num5 = parseInt(prompt(`Introduce el primer número`,1))
 
 for (let i=1; i<=num1; i++) {
@@ -147,6 +147,7 @@ for (let i=1; i<=num1; i++) {
     
 }
 
+
 // 10. Tabla de multiplicar de un número introducido por pantalla
     let num1 = parseInt(prompt(`Introduce el primer número`,1)), contador=0
 
@@ -154,7 +155,7 @@ for (let i=1; i<=num1; i++) {
         console.log(`${num1} x ${i} = ${num1*i}`)
 
     }
-
+*/
 // 11) Programa una función que dada una cadena de texto cuente el número de vocales y consonantes, pe. miFuncion("Hola Mundo") devuelva Vocales: 4, Consonantes: 5.
 
     const contarVocalesConsonates = (cadena) => {
@@ -179,3 +180,60 @@ for (let i=1; i<=num1; i++) {
     console.log(`cadena ingresada: ${cadena}`  );
     contarVocalesConsonates(cadena);
 
+// 10. Recorrer un arreglo al revés
+
+    const array=[0,1,2,3,4,5,6];
+
+    for (let i=array.length - 1; i >= 0; i--) {
+    console.log(array[i]);
+    }
+
+// 12. 
+/* 
+    1. Crear un array 'bills' que contenga 10 valores del test data.
+    2. Cree arrays vacíos para las propinas y los totales ('propinas' y 'totales')
+    3. Use la función 'calcTip' para calcular las propinas y los valores totales (factura + propina) para cada valor de factura en la matriz de facturas. ¡Use un ciclo for para realizar los 10 cálculos!
+
+    Test data: 22, 295, 176, 440, 37, 105, 10, 1100, 86 and 52
+
+    ¡Bonus!
+    4. Calcular el promedio de las facturas
+
+*/
+    //1.  Creando el array de las facturas
+    const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+    let tips = [];
+    let totals = [];
+ 
+    // Calculando la propina
+    const calcTip = (bill) => {
+        return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.20;
+    }
+
+    for (let i = 0; i < bills.length; i++) {
+        // console.log(`Propinas generadas : ${calcTip(bills[i])}`)
+        tips.push(calcTip(bills[i]));
+        totals.push(tips[i]+ bills[i]);
+    }
+
+    // bonus
+
+    const calcAverage = (arr) => {
+        let sum = 0;
+        for (let i = 0; i < arr.length; i++) {
+            sum += arr[i];
+        }
+        return sum / arr.length
+       
+    }
+
+  
+
+
+
+    console.log(`Las propinas fueron: [${tips}]`);
+    console.log(`Las facturas totales fueron: [${totals}]`);
+    console.log(calcAverage(totals));
+    console.log(calcAverage(tips));
+   
+   
