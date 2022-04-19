@@ -227,13 +227,24 @@ for (let i=1; i<=num1; i++) {
        
     }
 
-  
-
-
-
     console.log(`Las propinas fueron: [${tips}]`);
     console.log(`Las facturas totales fueron: [${totals}]`);
     console.log(calcAverage(totals));
     console.log(calcAverage(tips));
+
+// 13. FizzBuzz - Los multiplos de 3 deberán imprimir fizz, los multiplos de 5 buzz y ambos fizzbuzz
+
+    for (let i = 0; i < 100; i++) {
+        if (i % 15 === 0 && i % 5 === 0){
+            console.log(`${i} fizzbuzz`)
+        }
+        if ( i % 3 === 0) {
+            console.log(`${i} fizz`)
+        }else if (i % 5 === 0){
+            console.log(`${i} buzz`)
+        }
+    }
+
+
    
    
