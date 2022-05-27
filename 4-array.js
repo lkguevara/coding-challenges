@@ -168,4 +168,11 @@ console.log(deletePattern("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz")); // imprime 1
     console.log(bills, tips, totals); // imprime: [ 125, 555, 44 ] [ 18.75, 111, 8.8 ] [ 143.75, 666, 52.8 ]
 
 
-    
+// 15. tienes un array de números, usando la función map debes retornar todos los números del array multiplicados por dos.
+
+    const arrayMult = (array) => {
+        const newArray = array.map(e => e * 2);
+        return newArray
+    }
+
+    console.log(arrayMult([2, 4, 5, 6]))
