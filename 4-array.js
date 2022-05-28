@@ -176,3 +176,28 @@ console.log(deletePattern("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz")); // imprime 1
     }
 
     console.log(arrayMult([2, 4, 5, 6]))
+
+// 16. Si enumeramos todos los números naturales debajo de 10 que son múltiplos de 3 o 5, obtenemos 3, 5, 6 y 9. La suma de estos múltiplos es 23.Termina la solución para que devuelva la suma de todos los múltiplos de 3 o 5 por debajo del número pasado. Además, si el número es negativo, devuelve 0 (para los idiomas que los tienen). Nota: si el número es un múltiplo de 3 y 5, solo cuéntelo una vez .
+
+    function solution(number){
+    
+    let arr = [];
+    let multiple = [];
+    
+    // push all num between 0 and the number to arr
+    for (let i = 0; i < number; i++) {
+        arr.push(i);
+    }
+    
+    // if number in arr is a multiple or 3 or 5 push it to multiple
+    for (let i = 0; i < arr.length; i++) {
+        if (i % 3 === 0 || i % 5 === 0) {
+        multiple.push(i);
+        }
+    }
+    
+    // sum the total of the multiple array
+    const sumTotal = multiple.reduce((sum, num) => sum + num, 0);
+    
+    return sumTotal;
+    }
