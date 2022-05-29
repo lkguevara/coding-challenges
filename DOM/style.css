@@ -35,7 +35,7 @@ img{
 .header{
     position: sticky;
     top: 0;
-    padding: 1rem;
+    padding: 0.1rem;
     background-color: var(--primario);
     font-size: 1.3rem;
     color: var(--secundario);
@@ -120,3 +120,15 @@ color: var(--second-color);
 background-color: var(--main-modal-color);
 }
 
+/* Reloj digital */
+.relojDigital button{
+    background-color: rgba(255, 68, 0, 0.603);
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid #ff4343;
+    cursor: pointer;
+}
+
+.relojDigital button:hover {
+    background-color: rgba(255, 68, 0, 0.801);
+}
