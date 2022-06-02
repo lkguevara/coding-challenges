@@ -201,3 +201,28 @@ console.log(deletePattern("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz")); // imprime 1
     
     return sumTotal;
     }
+
+/* 17.  Se tiene un array de objetos que representan datos de personas con los siguientes atributos:
+            name
+            lastName
+            age 
+        El reto aquí es retornar un array de strings con los nombres*/
+
+    const names = (arr) => {
+        return arr[0][0]
+    }
+
+    console.log(
+        names[
+            {
+            name: 'Nicolas',
+            lastName: 'Molina',
+            age: 28
+            },
+            {
+            name: 'Valentina',
+            lastName: 'Molina',
+            age: 19
+            }
+        ]
+    )

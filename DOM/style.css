@@ -51,7 +51,7 @@ img{
     margin-right: auto;
     width: 100%;
     max-width: 1200px;
-    min-height: 100vh;
+    /* min-height: 100vh; */
     text-align: center;
 }
 
@@ -131,4 +131,12 @@ background-color: var(--main-modal-color);
 
 .relojDigital button:hover {
     background-color: rgba(255, 68, 0, 0.801);
+}
+
+/* Cuenta regresiva */
+
+#countdown {
+    border-radius: 8px;
+    border: 1px solid #ff4343;
+    color: #ff4343;
 }
