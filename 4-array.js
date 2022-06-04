@@ -209,20 +209,47 @@ console.log(deletePattern("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz")); // imprime 1
         El reto aquí es retornar un array de strings con los nombres*/
 
     const names = (arr) => {
-        return arr[0][0]
+        return arr.map(item => item.name)
     }
 
-    console.log(
-        names[
-            {
-            name: 'Nicolas',
-            lastName: 'Molina',
-            age: 28
-            },
-            {
-            name: 'Valentina',
-            lastName: 'Molina',
-            age: 19
+    console.log(names([
+        {
+        name: 'Nicolas',
+        lastName: 'Molina',
+        age: 28
+        },
+        {
+        name: 'Valentina',
+        lastName: 'Molina',
+        age: 19
+        }
+    ]));
+
+/* 18.  Se tiene un array con los siguientes atributos:
+            name
+            price
+            stock 
+        El reto aquí es agregar y calcular una nueva propiedad llamada "taxes", los impuestos deben ser del 19% con base al precio base.*/
+
+        const taxes = (arr) => {
+            // agregando el nuevo elemento al arreglo de objetos
+            for (let i = 0; i < arr.length; i++) {
+                arr[i].taxe = arr[i].price * 0.19;
+                console.log(arr)
             }
-        ]
-    )
+        }
+    
+        
+        console.log(taxes([
+            {
+                name: "Product 1",
+                price: 1000,
+                stock: 10
+              },
+              {
+                name: "Product 2",
+                price: 2000,
+                stock: 20
+              }
+        ]))
+
