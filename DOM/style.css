@@ -51,7 +51,7 @@ img{
     margin-right: auto;
     width: 60%;
     max-width: 1200px;
-    /* min-height: 100vh; */
+    min-height: 30vh;
     text-align: center;
 }
 
@@ -139,4 +139,34 @@ background-color: var(--main-modal-color);
     border-radius: 8px;
     border: 1px solid #ff4343;
     color: #ff4343;
+}
+
+/* scroll top button */
+
+.scroll-top-btn {
+    position: fixed;
+    z-index: 999;
+    bottom: 1vh;
+    left: calc(2rem + 1vw);
+    width: 4rem;
+    height: 4rem;
+    border-radius: 40%;
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: var(--primario);
+    cursor: pointer;
+    outline: 0;
+    border: 0;
+    transition: all 0.3s ease-out;
+}
+
+.scroll-top-btn:hover{
+    background-color: var(--secundario);
+    color: var(--primario)
+}
+
+.hidden{
+    visibility: hidden;
+    opacity:0;
+
 }

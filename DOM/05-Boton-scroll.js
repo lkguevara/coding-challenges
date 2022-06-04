@@ -1,28 +1,23 @@
-const id = document.querySelector("#countdown");
-const limitDate = ("Jun 01, 2023 21:13:00");
-const finalMessage = ("Feliz cumpleaños!!!");
+const btn = document.querySelector(".scroll-top-btn");
 
-const countdown = document.querySelector("#countdown"),
-    countdownDate = new Date(limitDate).getTime();
+// Establecer cuando aparecerá el botón
+window.addEventListener("scroll", (e) => {
+    let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-let countdownTempo = setInterval (() => {
-    let now = new Date().getTime(),
-     limitTime = countdownDate - now,
-     days = parseInt(limitTime/(1000 * 60 * 60 * 24)),
-     hours = parseInt(limitTime % (1000 * 60 * 60 * 24)/(1000 * 60 * 60)),
-     minutes = parseInt(limitTime % (1000 * 60 * 60)/(1000 * 60)),
-     seconds = parseInt(limitTime % (1000 * 60)/(1000));
-
-     countdown.innerHTML = `<h3>Faltan: ${days} días, ${hours} horas, ${minutes} minutos, ${seconds} seconds</h3>`
-
-    // console.log(countdownDate, now, limitTime);
-
-
-    if (limitTime < 0) {
-        clearInterval(countdownDate);
-        countdown.innerHTML = `<h3>${finalMessage}</h3>`
+    if (scrollTop > 50) {
+        btn.classList.remove('hidden')
+    }else {
+        btn.classList.add('hidden')
     }
-},1000);
 
+    console.log(window.pageYOffset, document.documentElement.scrollTop)
+})
+
+btn.addEventListener("click", e => {
+    window.scrollTo({
+        behavior: "smooth",
+        top: 0
+    })
+})
 
 
