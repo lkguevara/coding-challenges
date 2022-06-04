@@ -176,13 +176,13 @@ background-color: var(--main-modal-color);
     position: fixed;
     z-index: 999;
     bottom: 1vh;
-    top: calc(7rem + 1vw);
-    width: 4rem;
-    height: 4rem;
+    top: calc(7rem + 2vw);
+    width: 3.3rem;
+    height: 3.3rem;
     border-radius: 40%;
     font-size: 2rem;
     font-weight: bold;
-    background-color: var(--secundario);
+    background-color: black;
     cursor: pointer;
     outline: 0;
     border: 0;
@@ -191,7 +191,7 @@ background-color: var(--main-modal-color);
 
 
 .dark-mode{
-    background-color: black;
+    background-color: var(--secundario);
     color: var(--primario)
 }
 
