@@ -37,7 +37,7 @@ img{
     top: 0;
     padding: 0.1rem;
     background-color: var(--primario);
-    font-size: 1.3rem;
+    font-size: 1rem;
     color: var(--secundario);
     margin: 0 auto;
     text-align: center;
@@ -45,8 +45,7 @@ img{
 }
 
 .section {
-    padding: 2rem;
-    padding-top: 4rem;
+    padding-top: 3rem;
     margin-left: auto;
     margin-right: auto;
     width: 60%;
@@ -81,8 +80,8 @@ img{
     z-index: 999;
     bottom: 1vh;
     right: 1vw;
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
     border-radius: 50%;
     padding: 0px;
     display: flex;
@@ -100,17 +99,19 @@ img{
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+    padding-top: 10rem;
 
 }
 
 .menu a {
-    padding: 2rem;
+    padding: 1rem;
     width: inherit;
     display: block;
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     text-decoration: none;
     color: white;
     transition: all 0.3s ease;
+    
 }
 
 
@@ -124,6 +125,8 @@ background-color: var(--main-modal-color);
 .relojDigital button{
     background-color: rgba(255, 68, 0, 0.603);
     padding: 8px;
+    margin: 0.5rem;
+    flex-wrap: wrap;
     border-radius: 8px;
     border: 1px solid #ff4343;
     cursor: pointer;
@@ -138,7 +141,7 @@ background-color: var(--main-modal-color);
 #countdown {
     border-radius: 8px;
     border: 1px solid #ff4343;
-    color: #ff4343;
+    color: #3a3a3a;
 }
 
 /* scroll top button */
@@ -176,7 +179,8 @@ background-color: var(--main-modal-color);
     position: fixed;
     z-index: 999;
     bottom: 1vh;
-    top: calc(7rem + 2vw);
+    top: calc(5.5rem + 2vw);
+    margin-left: 0.4rem;
     width: 3.3rem;
     height: 3.3rem;
     border-radius: 40%;
