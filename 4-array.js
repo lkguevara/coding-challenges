@@ -229,7 +229,8 @@ console.log(deletePattern("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz")); // imprime 1
             name
             price
             stock 
-        El reto aquí es agregar y calcular una nueva propiedad llamada "taxes", los impuestos deben ser del 19% con base al precio base.*/
+        El reto aquí es agregar y calcular una nueva propiedad llamada "taxes", los impuestos deben ser del 19% con base al precio base.
+*/
 
         const taxes = (arr) => {
             // agregando el nuevo elemento al arreglo de objetos
@@ -253,3 +254,20 @@ console.log(deletePattern("xyz1, xyz2, xyz3, xyz4 y xyz5", "xyz")); // imprime 1
               }
         ]))
 
+
+/* 19.  Se tiene un array con palabras, tu desafío es retornar un array solo con las que cumplan con la condición de tener 4 o más letras.
+
+La solución debería tener un input y output como los siguientes:
+
+        input = solution(['amor', 'sol', 'piedra', 'día'])
+        ouput = [ 'amor', 'piedra' ]
+*/
+
+    function palabrasArray(array) {
+        
+        const filtro = array.filter (e =>  e.length >= 4);
+        return filtro
+        
+    }; 
+
+    console.log(palabrasArray(['amor', 'sol', 'piedra', 'día']));
