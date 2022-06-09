@@ -271,3 +271,55 @@ La solución debería tener un input y output como los siguientes:
     }; 
 
     console.log(palabrasArray(['amor', 'sol', 'piedra', 'día']));
+
+/* 20.  Se tiene un array de ordenes de compra con los siguientes atributos:
+
+        customerName: string
+        total: number
+        delivered: boolean
+
+    Debes filtrar todas las órdenes de compra que cumplan con la condición de tener un total mayor o igual a 100 y además que el estado delivered sea "true".
+
+La solución debería tener un input y output como los siguientes:
+
+        input = solution([
+            {
+                customerName: "Nicolas",
+                total: 100,
+                delivered: true,
+            },
+            {
+                customerName: "Zulema",
+                total: 120,
+                delivered: false,
+            },
+            ...
+        ]);
+
+        ouput = [
+            {
+                customerName: "Nicolas",
+                total: 100,
+                delivered: true,
+            },
+        ]
+*/
+
+    function filtroArray(array) {
+            
+        const filtro = array.filter (e =>  e.total >= 100 && e.delivered === true);
+        return filtro
+        
+    }; 
+
+    console.log(filtroArray([
+        {
+            customerName: "Nicolas",
+            total: 100,
+            delivered: true,
+        },
+        {
+            customerName: "Zulema",
+            total: 120,
+            delivered: false,
+        }]));
