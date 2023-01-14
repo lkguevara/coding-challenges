@@ -82,7 +82,7 @@
         let resultado = 0, enteroActual =0;
 
         for (let i = 0; i < s.length; i++) {
-            siguienteDigito = i< s.length - 1 ? s[i+1] : "B"
+            siguienteDigito = i < s.length - 1 ? s[i+1] : "B"
             
             enteroActual = reglasParticulares(s[i], siguienteDigito)
 
@@ -135,3 +135,35 @@
 
     console.log(numerosRomanos("IV"))
 
+
+// otra forma
+
+function romanoAEntero(s) {
+    let simbolos = {
+        I: 1,
+        V: 5,
+        X: 10,
+        L: 50,
+        C: 100,
+        D: 500,
+        M: 1000,
+        IV: 4,
+        IX: 9,
+        XL: 40,
+        XC: 90,
+        CD: 400,
+        CM: 900
+    }
+    let resultado = 0
+    for (let i = 0; i < s.length; i++) {
+        if (simbolos[s[i] + s[i + 1]]) {
+            resultado += simbolos[s[i] + s[i + 1]]
+            i++
+        } else {
+            resultado += simbolos[s[i]]
+        }
+    }
+    return resultado
+}
+
+console.log(romanoAEntero("VII"))
