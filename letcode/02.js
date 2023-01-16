@@ -138,7 +138,7 @@
 
 // otra forma
 
-function romanoAEntero(s) {
+ /*function romanoAEntero(s) {
     let simbolos = {
         I: 1,
         V: 5,
@@ -166,4 +166,4 @@ function romanoAEntero(s) {
     return resultado
 }
 
-console.log(romanoAEntero("VII"))
+console.log(romanoAEntero("MCMXCIV")) */

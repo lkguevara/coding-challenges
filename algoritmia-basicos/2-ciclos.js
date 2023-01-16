@@ -23,7 +23,7 @@
     console.log(`La cantidad de números pares fue: ${numerosPares}`);
     console.log(`La cantidad de números cinco fue: ${numeros5}`);
 
-/*// 2. Utilizando un bucle, mostrar la suma y la media de los numeros introducidos hasta introducir un numero negativo y ahí mostrar el resultado.
+// 2. Utilizando un bucle, mostrar la suma y la media de los numeros introducidos hasta introducir un numero negativo y ahí mostrar el resultado.
 
     let suma= 0, contador1= 0
 
@@ -63,7 +63,7 @@
         }
         
     }
-*/
+    
 // 5. Programa una función que cuente el número de caracteres de una cadena de texto.
     
     // function count(cadena="") {
