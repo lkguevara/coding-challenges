@@ -30,7 +30,7 @@ El valor numérico inicial es 0 y las operaciones deben aplicarse en el orden en
     Paso 4: Retornar o imprimir el resultado:
 */
 
-let decifrarMensaje = (data) => {
+decifrarMensaje = (data) => {
   let numeroInicial = 0;
   let salida = "";
 
@@ -49,6 +49,23 @@ let decifrarMensaje = (data) => {
   return salida;
 }
 
+// Otra forma más sencilla
+/*decifrarMensaje = (data) => {
+  let numeroInicial = 0;
+
+  for (let index = 0; index < data.length; index++) {
+    const simbolo = data[index];
+    if(simbolo == "#"){
+      numeroInicial++
+    }else if(simbolo == "@"){
+      numeroInicial--
+    }else if(simbolo == "*"){
+      numeroInicial *= numeroInicial;
+    }else if(simbolo == "&"){
+      console.log(numeroInicial)
+    }
+  }
+}*/
 
 console.log(decifrarMensaje("&###@&*&###@@##@##&######@@#####@#@#@#@##@@@@@@@@@@@@@@@*&&@@@@@@@@@####@@@@@@@@@#########&#&##@@##@@##@@##@@##@@##@@##@@##@@##@@##@@##@@##@@##@@##@@##@@&"));
 
